@@ -1,33 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Construction from '../layouts/Construction.astro';
+import Header from '../components/Header.astro'
+
 ---
 
-<Layout title="Unix Academy">
+<Construction>
+	<Header />
 	<main>
-		<h1>Unix Academy</h1>
-		<h2>Learn about <span class="text-gradient">Unix</span>, for free.</h2>
+
 	</main>
-</Layout>
+</Construction>
 
 <style>
 	main {
-		margin: auto;
 		padding: 1.5rem;
-		max-width: 100ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-	}
-	h1, h2 {
-		margin: 0;
-		text-align: center;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
