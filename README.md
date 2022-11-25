@@ -12,6 +12,10 @@ As cindyq has graciously licensed some of their work under a Creative Commons [(
 
 The aim of this project is to update cindyq's previous work and expand upon it. The original site, as the name implies, focuses solely on Linux - in contrast, this site aims to eventually serve as a body of knowledge for a number of Unix-like operating systems, including BSD and potentially MacOS.
 
+## Limitations
+
+Due to making significant changes to the original text content, I have declined to incorporate the translations made available by the original project. I am unable to verify the accuracy and correctness of pages written in English, unfortunately.
+
 ## Attribution & Inspiration
 
 All credit for the original body of work goes to cindyq and respective GitHub contributors. Inspiration for this project is drawn from the likes of [The Odin Project](https://www.theodinproject.com/) and [freecodecamp](https://www.freecodecamp.org/).
