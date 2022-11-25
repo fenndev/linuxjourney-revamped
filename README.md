@@ -1,15 +1,23 @@
-# Linux Journey
+# Unix Academy
 
-[Linux Journey](https://linuxjourney.com) is a site dedicated to making learning Linux fun and easy.
+This project is a fork and expansion of [Linux Journey](https://linuxjourney.com), "a site dedicated to making learning Linux fun and easy."
 
-## Project Hiatus
+## Why?
 
-Due to the overwhelming support for translations, Linux Journey is in the middle of a site overhaul to make it more scalable for translations. Unfortunately, I am a full time professional and full time student so it has taken longer to do the migration than I had hoped. For now, any additional translations/edits/additions will not be added to the site. I'll try my best to finish adding everything that was already committed and will re-visit the project when I have more cycles. Thank you for understanding.
+After inquiring about quality resources to learn more about Linux and its inner workings, one of the places suggested to me was Linux Journey. After reading through some of the site, I noticed a number of spelling & grammatical errors, as well as information that was outdated. I went to visit the project page's [GitHub](https://github.com/cindyq/linuxjourney) only to find that Linux Journey's last update was in March of 2017, when a project hiatus was announced. This update remains project owner [cindyq](https://github.com/cindyq)'s last public GitHub contribution as of the beginning of this project.
 
-## Language Support
+As cindyq has graciously licensed some of their work under a Creative Commons [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license, I've decided to fork the project and improve it.
 
-If you would like to see Linux Journey in your local language, please help us translate. You can fork our repo and add your translations in the respective locales folder.
+## Project Goals
 
-## Usage
+The aim of this project is to update cindyq's previous work and expand upon it. The original site, as the name implies, focuses solely on Linux - in contrast, this site aims to eventually serve as a body of knowledge for a number of Unix-like operating systems, including BSD and potentially MacOS.
 
-Linux Journey was created to document the single journey I took to learn Linux, which is far from over. But, everyone's journey is a little different. We can further improve the knowledge of the greater Linux community through contribution and collaboration. Thusly, the text content of Linux Journey has been made free to modify and distribute. For full license terms see: [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). This license does not include the images, site design and source code which is subject to All Rights Reserved. 
+## Attribution & Inspiration
+
+All credit for the original body of work goes to cindyq and respective GitHub contributors. Inspiration for this project is drawn from the likes of [The Odin Project](https://www.theodinproject.com/) and [freecodecamp](https://www.freecodecamp.org/).
+
+## Licensing
+
+The original project made its text content available under a Creative Commons Attribution-ShareAlike International license while its website code remained proprietary. This project, in contrast, is and will remain entirely open source. To that end, this project will be licensed under the GNU General Public License version 3 (GPLv3).
+
+The GPLv3 is listed as a ['BY-SA Compatible License'](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses), and as such will be used here.
