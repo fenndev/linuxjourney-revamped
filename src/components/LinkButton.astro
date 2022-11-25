@@ -1,0 +1,34 @@
+---
+export interface Props {
+	link: string,
+    title: string
+}
+
+const { link, title } = Astro.props;
+---
+
+<a href={link} class="css-button-rounded--green">{title}</a>
+
+<style>
+.css-button-rounded--green {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--green-accent);
+    background: var(--green-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.css-button-rounded--green:hover {
+background: #fff;
+color: var(--green-accent)
+}
+</style>

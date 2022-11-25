@@ -1,21 +1,30 @@
 ---
-import Construction from '../layouts/Construction.astro';
-import Header from '../components/Header.astro'
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import LinkButton from '../components/LinkButton.astro';
 ---
 
-<Construction>
+<Layout title="Unix Academy | Under Construction">
 	<Header />
 	<main>
-
+		<LinkButton title="GitHub" link="https://github.com/fenndev/linuxjourney-revamped" />
+		<LinkButton title="Attributions" link="/Attributions" />
 	</main>
-</Construction>
+</Layout>
 
 <style>
+	body {
+        background-image: url(/img/construction.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
 	main {
 		padding: 1.5rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: 2rem;
 	}
 </style>

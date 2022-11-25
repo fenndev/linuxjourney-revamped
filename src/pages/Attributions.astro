@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import LinkButton from '../components/LinkButton.astro';
+---
+
+<Layout title="Unix Academy | Attributions">
+	<Header />
+	<main>
+        <section class="button-group">
+            <LinkButton title="GitHub" link="https://github.com/fenndev/linuxjourney-revamped" />
+            <LinkButton title="Home" link="/" />
+        </section>
+		<section class="attributions">
+            <p>This project makes use of assets from other works which are listed below:</p>
+            <ul>
+                <li>Original body of work sourced from <a href="">Linux Journey</a></li>
+                <li>Buttons created with <a href="https://markodenic.com/tools/buttons-generator/">Marko Denic's <em>Buttons Generator</em></a></li>
+                <li>Background illustrations courtesy of <a href="https://undraw.co/">unDraw</a></li>
+            </ul>
+        </section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 1.5rem;
+		display: flex;
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+    .button-group {
+        display: flex;
+        gap: 2rem;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--green-accent);
+        font-weight: bold;
+    }
+
+    a:hover {
+        font-size: 1.1rem;
+    }
+</style>
