@@ -12,7 +12,8 @@ Let's say I want to change my password, simple right? I just use the passwd comm
 
 What is the password command doing? It's modifying a couple of files, but most importantly it's modifying the /etc/shadow file. Let's look at that file for a second: 
 
-<pre>$ ls -l /etc/shadow
+<pre>
+$ ls -l /etc/shadow
 
 -rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow
 </pre>
@@ -21,7 +22,8 @@ Oh wait a minute here, this file is owned by root? How is it possible that we ar
 
 Let's look at another permission set, this time of the command we ran: 
 
-<pre>$ ls -l /usr/bin/passwd
+<pre>
+$ ls -l /usr/bin/passwd
 
 -rwsr-xr-x 1 root root 47032 Dec 1 11:45 /usr/bin/passwd
 </pre>

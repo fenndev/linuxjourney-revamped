@@ -19,28 +19,35 @@ magazine
 
 And you wanted to remove the duplicates, well you can use the uniq command:
 
-<pre>$ uniq reading.txt
+<pre>
+$ uniq reading.txt
 book
 paper
 article
-magazine</pre>
+magazine
+</pre>
 
 Let's get the count of how many occurrences of a line:
 
-<pre>$ uniq -c reading.txt
+<pre>
+$ uniq -c reading.txt
 2 book
 2 paper
 2 article
-1 magazine</pre>
+1 magazine
+</pre>
 
 Let's just get unique values:
 
-<pre>$ uniq -u reading.txt
-magazine</pre>
+<pre>
+$ uniq -u reading.txt
+magazine
+</pre>
 
 Let's just get duplicate values:
 
-<pre>$ uniq -d reading.txt
+<pre>
+$ uniq -d reading.txt
 book
 paper
 article
@@ -61,7 +68,8 @@ magazine
 article
 </pre>
 
-<pre>$ uniq reading.txt
+<pre>
+$ uniq reading.txt
 reading.txt
 book
 paper
@@ -69,7 +77,8 @@ book
 paper
 article
 magazine
-article</pre>
+article
+</pre>
 
 The result returned by uniq will contain all the entries unlike the very first
 example.
@@ -81,7 +90,8 @@ $ sort reading.txt | uniq
 article
 book
 magazine
-paper</pre>
+paper
+</pre>
 
 ## Exercise
 

@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Sidebar from '../components/Sidebar.astro';
+import type { MDXInstance } from 'astro';
+import type Frontmatter from '../types/Frontmatter';
+
+const pages = await Astro.glob('../pages/lessons/*/*.mdx') as MDXInstance<Frontmatter>[];
+console.log(pages);
 ---
 
 <Layout title="Unix Academy">
+	<Sidebar pages={pages}/>
 	<main>
 		<h1>Learn the ways of <span class="text-gradient">Linux</span>, for free.</h1>
 		<section class="level-grid">
