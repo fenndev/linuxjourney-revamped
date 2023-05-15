@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # Astro-specific folders
 .astro
+
+# Page content
+src/pages/lessons
