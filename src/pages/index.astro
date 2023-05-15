@@ -1,59 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import type { MDXInstance } from 'astro';
-import type Frontmatter from '../types/Frontmatter';
+import { getCollection } from 'astro:content';
 
-const pages: MDXInstance<Frontmatter>[] = await Astro.glob('../pages/lessons/**/*.mdx');
+const lessons = await getCollection('lessons');
+const noviceLessons = await getCollection('lessons', ({id}) => {
+    return id.startsWith('novice/getting-started');
+})
 ---
 
-<Layout title="Unix Academy">
-    <ul>
-        {
-            pages.map((page) => {
-                return (
-                    <li>
-                        <a href={page.url}>{page.file}</a>
-                    </li>
-                );
-            })
-        }
-    </ul>
-</Layout>
+    {lessons.map(lesson => (
+        <h1>{lesson.data.title}</h1>
+        <h2>{lesson.data.lastUpdated}</h2>
+        <p>{lesson.data.description}</p>
+    ))}
 
-<style>
-    main {
-        margin: auto;
-        padding: 1.5rem;
-        max-width: 100ch;
-    }
-    h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin: 0;
-        text-align: center;
-    }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-
-    .level-grid {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-    }
-
-    .level-grid h2 {
-        text-align: center;
-    }
-
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
-        gap: 1rem;
-        padding: 0;
-    }
-</style>
+    {noviceLessons.map(lesson => (
+        <h1>{lesson.data.title}</h1>
+        <h2>{lesson.data.lastUpdated}</h2>
+        <p>{lesson.data.description}</p>
+    ))}
