@@ -1,180 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Sidebar from '../components/Sidebar.astro';
 import type { MDXInstance } from 'astro';
 import type Frontmatter from '../types/Frontmatter';
 
-const pages = await Astro.glob('../pages/lessons/*/*.mdx') as MDXInstance<Frontmatter>[];
-console.log(pages);
+const pages: MDXInstance<Frontmatter>[] = await Astro.glob('../pages/lessons/**/*.mdx');
 ---
 
 <Layout title="Unix Academy">
-	<Sidebar pages={pages}/>
-	<main>
-		<h1>Learn the ways of <span class="text-gradient">Linux</span>, for free.</h1>
-		<section class="level-grid">
-			<h2>Grasshopper</h2>
-			<ul role="list" class="link-card-grid">
-				<Card
-					href="https://docs.astro.build/"
-					title="Getting Started"
-					body="What is Linux? Get started with choosing a distribution and installation."
-				/>
-				<Card
-					href="https://astro.build/integrations/"
-					title="Command Line"
-					body="Learn the fundamentals of the command line, including how to navigate files, directories, and more!"
-				/>
-				<Card
-					href="https://astro.build/themes/"
-					title="Text-Fu"
-					body="Learn basic text manipulation and navigation."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Advanced Text-Fu"
-					body="Navigate text like a Linux spider monkey with vim and emacs."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="User Management"
-					body="Learn about user roles and management."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Permissions"
-					body="Learn about permission levels and modifying permissions."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Processes"
-					body="Learn about the running processes on your system."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Packages"
-					body="Learn all about various package management tools, including dkpg, apt, rpm, and yum."
-				/>
-			</ul>
-		</section>
-		<section class="level-grid">
-			<h2>Journeyman</h2>
-			<ul role="list" class="link-card-grid">
-				<Card
-					href="https://docs.astro.build/"
-					title="Devices"
-					body="Learn about Linux devices and how they interact with the kernel and userspace."
-				/>
-				<Card
-					href="https://astro.build/integrations/"
-					title="Filesystem"
-					body="Learn about the Linux filesystem, the different types of filesystems, partitioning, and more."
-				/>
-				<Card
-					href="https://astro.build/themes/"
-					title="Boot"
-					body="Learn about the stages of the Linux boot process."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Kernel"
-					body="Learn about the Linux kernel, how it works, and how to configure it."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Init"
-					body="Learn about the different init systems, including SysV, Upstart, and systemd."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Process Utilization"
-					body="Learn resource monitoring with top, load averages, iostat, and more!"
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Logging"
-					body="Learn about system logs and the /var/log directory."
-				/>
-			</ul>
-		</section>
-		<section class="level-grid">
-			<h2>Networking Nomad</h2>
-			<ul role="list" class="link-card-grid">
-				<Card
-					href="https://docs.astro.build/"
-					title="Network Sharing"
-					body="Learn about network sharing with rsync, scp, nfs, and more."
-				/>
-				<Card
-					href="https://astro.build/integrations/"
-					title="Network Basics"
-					body="Learn about networking basics and the TCP/IP model."
-				/>
-				<Card
-					href="https://astro.build/themes/"
-					title="Subnetting"
-					body="Learn about subnets and how to do subnet arithmetic."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Routing"
-					body="Learn how packets are routed across networks."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Network Config"
-					body="Learn about network configuration using Linux tools."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="Troubleshooting"
-					body="Learna bout common networking tools to help you diagnose and troubleshoot issues."
-				/>
-				<Card
-					href="https://astro.build/chat/"
-					title="DNS"
-					body="Everything and more that you wanted to know about DNS."
-				/>
-			</ul>
-		</section>
-	</main>
+    <ul>
+        {
+            pages.map((page) => {
+                return (
+                    <li>
+                        <a href={page.url}>{page.file}</a>
+                    </li>
+                );
+            })
+        }
+    </ul>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 100ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-		text-align: center;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
+    main {
+        margin: auto;
+        padding: 1.5rem;
+        max-width: 100ch;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin: 0;
+        text-align: center;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
 
-	.level-grid {
-		display: flex;
-		flex-direction: column;
-		margin-top: 2rem;
-	}
+    .level-grid {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
 
-	.level-grid h2 {
-		text-align: center;	
-	}	
+    .level-grid h2 {
+        text-align: center;
+    }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22ch, 1fr));
+        gap: 1rem;
+        padding: 0;
+    }
 </style>

@@ -1,21 +1,25 @@
 ---
-import type { MDXInstance } from "astro";
-import PageLink from "./PageLink.astro";
+import type { MDXInstance } from 'astro';
+import PageLink from './PageLink.astro';
 
 interface Frontmatter {
-    title: string,
-    url: string
+    title: string;
+    url: string;
 }
 
 export interface Props {
     pages: MDXInstance<Frontmatter>[];
 }
 
-const {pages} = Astro.props;
+const { pages } = Astro.props;
 ---
 
 <ul>
-    {pages.map(page => {
-        <PageLink title={page.frontmatter.title} url={page.frontmatter.url} />
-    })}
+    {
+        pages.map((page) => {
+            <li>
+                <a href="test">Yrdy</a>
+            </li>;
+        })
+    }
 </ul>
