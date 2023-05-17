@@ -1,20 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
-
-const lessons = await getCollection('lessons');
-const noviceLessons = await getCollection('lessons', ({id}) => {
-    return id.startsWith('novice/getting-started');
-})
+import { getCollection, getEntryBySlug } from 'astro:content';
+import Sidebar from '../components/Sidebar.astro';
 ---
 
-    {lessons.map(lesson => (
-        <h1>{lesson.data.title}</h1>
-        <h2>{lesson.data.lastUpdated}</h2>
-        <p>{lesson.data.description}</p>
-    ))}
-
-    {noviceLessons.map(lesson => (
-        <h1>{lesson.data.title}</h1>
-        <h2>{lesson.data.lastUpdated}</h2>
-        <p>{lesson.data.description}</p>
-    ))}
+<Sidebar />
