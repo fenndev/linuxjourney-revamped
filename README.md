@@ -14,7 +14,7 @@ The aim of this project is to update cindyq's previous work and expand upon it. 
 
 ## Limitations
 
-Due to making significant changes to the original text content, I have declined to incorporate the translations made available by the original project. I am unable to verify the accuracy and correctness of pages written in English, unfortunately.
+Due to making significant changes to the original text content, I have declined to incorporate the translations made available by the original project. I am unable to verify the accuracy and correctness of pages written in languages other than English, unfortunately.
 
 ## Attribution & Inspiration
 
